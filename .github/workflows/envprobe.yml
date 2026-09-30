@@ -1,0 +1,9 @@
+name: envprobe
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: b74-prod
+    steps:
+      - run: echo "DEPLOYED to b74-prod by ${{ github.actor }}"
